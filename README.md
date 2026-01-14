@@ -1,4 +1,4 @@
----
+
 
 # YOLOv8 Pose Inference API
 
@@ -10,7 +10,7 @@ Service này được thiết kế như **inference worker**:
 * Trả kết quả pose (bbox + keypoints)
 * Không xử lý orchestration / scale (để Kafka / hệ thống khác lo)
 
----
+
 
 ## 1. Yêu cầu môi trường
 
@@ -145,10 +145,10 @@ Response sẽ **echo lại đúng chuỗi `ts` input**, không trả timestamp �
       "class_id": 0,
       "class_name": "person",
       "conf": 0.92,
-      "bbox_xyxy": [x1, y1, x2, y2],
+      "bbox_xyxy": [120.5, 45.2, 360.8, 720.1],
       "keypoints": [
-        [x, y, conf],
-        [x, y, conf]
+        [150.1, 80.3, 0.98],
+        [155.6, 120.9, 0.95]
       ],
       "bbox_meta": {
         "has_helmet": null,
@@ -203,3 +203,4 @@ curl -X POST "http://localhost:8000/v1/pose" \
   → Bình thường, model đã warmup khi startup
 
 ---
+
