@@ -212,10 +212,11 @@ Ghi chú:
 ## 8. Ví dụ gọi API
 
 ```
-curl -X POST "http://localhost:8000/v1/pose" \
-  -F "image=@/path/to/image.jpg" \
-  -F "cam_id=cam01" \
-  -F "ts=2026-01-14T10:30:00Z"
+curl.exe -X POST http://localhost:8000/v1/pose `
+  -F "image=@1.jpg" `
+  -F "cam_id=cam_test_01" `
+  -F "ts=2026-01-14T09:35:12.456Z" `
+  -F "image_id=cam_test_01-001"
 ```
 
 ## 9. Ghi chú thiết kế
@@ -224,3 +225,4 @@ curl -X POST "http://localhost:8000/v1/pose" \
 * Không xử lý batching, queue, scale
 * Có thể đặt sau Kafka / message queue / load balancer
 * Model được load một lần khi startup
+
