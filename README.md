@@ -24,10 +24,12 @@ Service này được thiết kế như **inference worker**:
 ## 2. Cấu trúc thư mục
 
 ```
-api/
-├── main.py                # FastAPI application
-├── requirements.txt       # Python dependencies
-└── yolov8n-pose.pt        # YOLOv8 pose model weights
+test-docker/
+├── Dockerfile # Container build instructions
+├── main.py # FastAPI application
+├── README.md # Usage and API docs
+├── requirements.txt # Python dependencies
+└── yolov8n-pose.pt # YOLOv8 pose model weights
 ```
 
 > Lưu ý: file `yolov8n-pose.pt` phải nằm cùng thư mục với `main.py`.
@@ -203,4 +205,5 @@ curl -X POST "http://localhost:8000/v1/pose" \
   → Bình thường, model đã warmup khi startup
 
 ---
+
 
